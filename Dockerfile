@@ -7,6 +7,8 @@ ENV GRADLE_OPTS -Dorg.gradle.daemon=false
 COPY build.gradle settings.gradle ./
 RUN gradle classes || echo "ok"
 
+# comment
+
 # Copy in the src and build
 COPY src /app/src
 RUN gradle build
