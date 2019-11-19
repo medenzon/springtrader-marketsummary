@@ -41,6 +41,7 @@ public class CurrencyUtils {
     String currencyCode = Currency.getInstance(locale).getCurrencyCode();
     try {
       BigDecimal exchangeRate = getRate(currencyCode);
+      System.out.print("");
 
       marketSummary.setTradeStockIndexAverage((tradeStockIndexAverage.multiply(exchangeRate))
           .setScale(FinancialUtils.SCALE, RoundingMode.HALF_UP));
